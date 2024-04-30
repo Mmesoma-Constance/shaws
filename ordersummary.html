@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Summary Page</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-black text-white">
+    <div class="flex flex-col justify-center items-center h-lvh mx-4">
+      <div id="orderSummary"></div>
+      <div class="flex flex-row gap-6 my-10">
+        <a href="shawarma.html#order" class="">
+          <button
+            id="summaryBtn"
+            class="border-2 border-white px-10 opacity-90 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all"
+          >
+            Go Back
+          </button></a
+        >
+        <a href="payment.html">
+          <button
+            id="summaryBtn"
+            class="border-2 border-white px-10 opacity-90 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all"
+          >
+            Proceed
+          </button></a
+        >
+      </div>
+    </div>
+
+    <script>
+      /* function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param)
+    }
+    const result = getQueryParam("result");
+    */
+      const orderSummary = sessionStorage.getItem("orderSummary");
+
+      document.getElementById("orderSummary").innerText = orderSummary;
+    </script>
+  </body>
+</html>

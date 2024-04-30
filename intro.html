@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddie's Shawarma Intro</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+        }
+
+        @keyframes revealText {
+            0% {
+                font-size: 0;
+            }
+            100% {
+                font-size: 36px;
+            }
+        }
+
+        .logo {
+            font-size: 0;
+            overflow: hidden;
+            animation: revealText 2s ease forwards;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #spinner {
+            display: block;
+            margin: 0 auto;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #ccc;
+            border-top-color: #333;
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+
+        #loading-text {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+     
+    </style>
+
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="flex flex-col justify-center items-center h-[100vh] mx-4">
+        <h1 class="logo">Eddie's Shawarma</h1>
+        <div id="loading-text">Loading...</div>
+        <div id="spinner"></div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "signup.html";
+        }, 6000)
+    </script>
+</body>
+</html>

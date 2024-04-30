@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="mx-0">
+    <div
+      class="flex flex-col justify-center items-center h-screen overflow-hidden"
+    >
+      <h1 class="text-2xl font-semibold font-sans">Please sign up</h1>
+      <form class="space-y-4 flex flex-col mt-5">
+        <input
+          type="text"
+          id="inputId"
+          class="myName w-[300px] outline-none pl-4 focus:shadow-lg border border-red-700 rounded py-2 px-2"
+          placeholder="Please enter your name.."
+        />
+        <input
+          type="text"
+          id="inputId"
+          class="myPassword w-[300px] outline-none pl-4 focus:shadow-lg border border-red-700 rounded py-2 px-2"
+          placeholder="Please enter your password.."
+        />
+      </form>
+      <button
+        id="myBtn"
+        class="bg-red-700 text-white w-[300px] py-3 text-lg font-semibold hover:opacity-85 px-10 rounded mt-2"
+        onclick="submit()"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <script>
+      //get the input value
+
+      function submit() {
+        let myInput = document.querySelector(".myName");
+        let inputValue = myInput.value;
+
+        let mypassword = document.querySelector(".myPassword");
+        let passwordValue = mypassword.value;
+        console.log(passwordValue);
+        localStorage.setItem("username", inputValue);
+        localStorage.setItem("mypassword", passwordValue);
+        window.location.href = "menshome.html";
+      }
+
+      let presentTime = new Date();
+      let presentHour = presentTime.getHours();
+      let presentMinutes = presentTime.getMinutes();
+      let presentSeconds = presentTime.getSeconds();
+
+      let inputIds = document.querySelectorAll("inputId");
+
+      //add background to the inputs
+      inputIds.forEach(function (inputField) {
+        if (presentHour >= 19 || presentHour < 7) {
+          inputField.style.background = "transparent";
+          document.body.style.background = "black";
+          document.body.style.color = "white";
+        } else {
+          inputField.style.background = "whitesmoke";
+          document.body.style.background = "white";
+          document.body.style.color = "black";
+        }
+      });
+
+      console.log(presentHour);
+    </script>
+  </body>
+</html>

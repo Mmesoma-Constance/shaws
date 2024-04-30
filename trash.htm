@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="../public/event.css" />
+  </head>
+  <body>
+    <div class="overflow-hidden">
+      <!---------------------------------------------------->
+
+      <header class="head">
+        <div class="columns">
+          <a href="" class="logo">
+            Domino's Shawarma
+            <span class="p-2">The Taste is different</span>
+          </a>
+          <nav class="nav">
+            <a href="" class="active">Home</a>
+            <a href="">Menu</a>
+            <a href="">Special</a>
+            <a href="">About us</a>
+            <a href="">Events</a>
+            <a href="">Contact</a>
+          </nav>
+          <a href="" class="phone">+7 (123) 456 345</a>
+        </div>
+      </header>
+      <div class="intro">
+        <div class="background">
+          <img src="images/shawarma (2).jpg" alt="" class="h-40" />
+          <div class="overlay"></div>
+          <div class="content mx-auto text-center">
+            <h1 class="">Domino's Shawarma</h1>
+            <h2 class="">The best shawarma in town</h2>
+            <a href="" class="button">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <li class="items-center self-end">
+        <span
+          id="decrementBtn"
+          class="bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black addValue"
+          onclick="valueMinus('-')"
+          >-</span
+        >
+        <span
+          class="cursor-pointer hover:opacity-100 px-2 rounded-full border numberValue"
+          >1</span
+        >
+        <span
+          id="incrementBtn"
+          class="bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black addValue"
+          onclick="valueMinus('+')"
+          >+</span
+        >
+      </li>
+    </div>
+  </body>
+</html>
+
+<div class="mb-7 inputFile-container">
+  <h3 class="">
+    <input
+      type="file"
+      id="photo"
+      class="border-2 border-gray-400"
+      name="photo"
+      style="display: none"
+      required
+    />
+    <label
+      for="photo"
+      class="file-upload-text text-center flex justify-center items-center"
+      >Add a photo</label
+    >
+  </h3>
+  <p class="cityError text-xs text-red-400"></p>
+</div>

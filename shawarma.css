@@ -1,0 +1,385 @@
+:root {
+  --gold: #f1c55e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 10px;
+}
+
+header div.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+header div.columns a {
+  color: white;
+  text-decoration: none;
+}
+
+header div.columns nav a {
+  font-size: 16px;
+  align-items: center;
+}
+header div.columns span.phone {
+  font-size: 17px;
+  align-items: center;
+}
+
+header a.logo {
+  line-height: 14px;
+  padding-top: 4px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header a.logo span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #aaa;
+}
+
+header div.columns nav {
+  align-items: center;
+}
+
+header div.columns nav a {
+  margin: 0 12px;
+}
+
+header div.columns nav a.active {
+  color: var(--gold);
+}
+
+.head {
+  line-height: 56px;
+  padding-top: 4px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.image {
+  object-position: 40% 35%;
+}
+
+div.intro {
+  position: relative;
+}
+
+div.intro div.overlay {
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+div.intro div.background {
+  position: absolute;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+div.intro div.content {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 3%;
+  font-weight: 500;
+}
+
+div.intro div.content h2 {
+  font-size: 25px;
+}
+
+div.intro div.content .button {
+  border: 0;
+  background-color: white;
+  color: #000;
+  font-size: 20px;
+  padding: 10px 60px;
+  display: inline-block;
+  margin-top: 50px;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+.menu {
+  max-width: 600px;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+}
+
+.menu2 {
+  max-width: 700px;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+}
+
+.menu3 {
+  max-width: 750px;
+  margin: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+}
+
+@media screen and (min-width: 788px) {
+  div.intro div.content {
+    right: 0;
+  }
+
+  .menu::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .menu::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .menu2::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .menu2::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .menu3::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .menu3::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #aaaaaa9d;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+  }
+}
+
+#order {
+  scroll-behavior: smooth;
+}
+
+.horizontal_slider {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1198px) {
+  .horizontal_slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slider_container {
+  display: block;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px dotted;
+  border-left-color: rgb(0, 0, 0, 0.1);
+  border-radius: 50%;
+  animation: rotate_anim 1.5s linear infinite;
+  display: none;
+}
+
+#process {
+  display: none;
+}
+
+#checkMsg {
+  display: inline-block;
+}
+
+#process2 {
+  display: none;
+}
+
+#checkMsg2 {
+  display: inline-block;
+}
+
+#process3 {
+  display: none;
+}
+
+#checkMsg3 {
+  display: inline-block;
+}
+
+@keyframes rotate_anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hiddenText {
+  display: none;
+  transition: 0.5s;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  padding: 0 8px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-group input {
+  height: 44px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  background: transparent;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: 0;
+  font-size: 13px;
+  background-color: #000;
+  color: rgb(204, 208, 211);
+}
+
+.input-group input {
+  width: 350px;
+}
+
+footer div.columns {
+  display: grid;
+  gap: 50px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  header div.columns span.phone {
+    font-size: 14px;
+    align-items: center;
+  }
+
+  footer div.columns {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer div.columns div:nth-child(2) {
+    text-align: left;
+  }
+}
+
+footer div.columns div:nth-child(2) {
+  text-align: center;
+}
+
+#shawarmaOptions {
+  background-color: #242323;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}

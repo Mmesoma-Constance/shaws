@@ -1,0 +1,30 @@
+.inputFile-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photoInputted {
+  position: absolute;
+
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload-text {
+  text-align: center;
+}
+
+.errorImg {
+  border: 2px solid red;
+}

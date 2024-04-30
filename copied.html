@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="">
+    <div id="shawarmaOptions">
+      <div
+        class="shawarma-option"
+        data-name="Chicken Shawarma"
+        data-price="5000"
+      >
+        <input
+          type="checkbox"
+          class="shawarma-checkbox"
+          name="Chicken Shawarma"
+          value="5000"
+        />
+        <label>Chicken Shawarma - Price: 5000 Naira</label>
+        <button class="quantity-btn increment-btn">+</button>
+        <span class="quantity-display">0</span>
+        <button class="quantity-btn decrement-btn">-</button>
+      </div>
+
+      <div class="shawarma-option" data-name="Fish Shawarma" data-price="6500">
+        <div
+          class="border-2 p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-80 md:w-[390px]"
+        >
+          <div class="flex flex-row gap-3 w-full">
+            <span class="w-[120px]">
+              <img
+                src="images/shawarma (12).jpg"
+                alt=""
+                class="w-20 h-14 object-cover"
+            /></span>
+
+            <span class="w-full">
+              <input
+                type="checkbox"
+                class="shawarma-checkbox"
+                name="Beef Shawarma"
+                value="6,500"
+              />
+              <label for="myCheckbox3">Fish Shawarma</label>
+              <p class="text-sm">
+                <span class="">&#8358;</span
+                ><span class="listPrice">6,500</span>
+              </p>
+            </span>
+
+            <button
+              class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+            >
+              +
+            </button>
+            <span class="quantity-display items-center self-end">0</span>
+            <button
+              class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="shawarma-option"
+        data-name="Chicken Shawarma"
+        data-price="5500"
+      >
+        <div
+          class="border-2 p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-80 md:w-[390px]"
+        >
+          <div class="flex flex-row gap-3 w-full">
+            <span class="w-[120px]">
+              <img
+                src="images/shawarma (12).jpg"
+                alt=""
+                class="w-20 h-14 object-cover"
+            /></span>
+
+            <span class="w-full">
+              <input
+                type="checkbox"
+                class="shawarma-checkbox"
+                name="Beef Shawarma"
+                value="6,500"
+              />
+              <label for="myCheckbox3">Chicken Shawarma</label>
+              <p class="text-sm">
+                <span class="">&#8358;</span
+                ><span class="listPrice">5,500</span>
+              </p>
+            </span>
+
+            <button
+              class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+            >
+              +
+            </button>
+            <span class="quantity-display items-center self-end">0</span>
+            <button
+              class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shawarma-option" data-name="Fish Shawarma" data-price="7000">
+        <input
+          type="checkbox"
+          class="shawarma-checkbox"
+          name="Fish Shawarma"
+          value="7000"
+        />
+        <label>Fish Shawarma - Price: 7000 Naira</label>
+        <button class="quantity-btn increment-btn">+</button>
+        <span class="quantity-display">0</span>
+        <button class="quantity-btn decrement-btn">-</button>
+      </div>
+    </div>
+
+    <button onclick="showResult()">Show Result</button>
+
+    <script src="order.js"></script>
+  </body>
+</html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menstruation Cycle Tracker</title>
+    <style>
+      #inputForm {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #calendar {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      #days {
+        display: flex;
+        gap: 5px;
+      }
+
+      .day {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+
+      .date {
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .highlight {
+        background-color: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inputForm">
+      <label for="lastDate">Last Menstruation Date:</label>
+      <input type="date" id="lastDate" name="lastDate" required /><br />
+
+      <label for="cycleLength">Average Cycle Length (in days):</label>
+      <input
+        type="number"
+        id="cycleLength"
+        name="cycleLength"
+        min="1"
+        required
+      /><br />
+
+      <label for="duration">Cycle Duration (in days):</label>
+      <input
+        type="number"
+        id="duration"
+        name="duration"
+        min="1"
+        required
+      /><br />
+
+      <button onclick="calculateNextCycle()">Submit</button>
+    </div>
+
+    <div id="calendar" style="display: none">
+      <div id="month"></div>
+      <div id="days"></div>
+    </div>
+
+    <p id="remainingDays"></p>
+
+    <script>
+      function calculateNextCycle() {
+        const lastDateInput = document.getElementById("lastDate");
+        const cycleLengthInput = document.getElementById("cycleLength");
+        const durationInput = document.getElementById("duration");
+        const calendarContainer = document.getElementById("calendar");
+        const monthContainer = document.getElementById("month");
+        const daysContainer = document.getElementById("days");
+        const remainingDaysParagraph = document.getElementById("remainingDays");
+
+        const lastDate = new Date(lastDateInput.value);
+        const cycleLength = parseInt(cycleLengthInput.value);
+        const duration = parseInt(durationInput.value);
+
+        if (
+          isNaN(cycleLength) ||
+          cycleLength <= 0 ||
+          isNaN(duration) ||
+          duration <= 0
+        ) {
+          alert("Please enter valid cycle length and duration.");
+          return;
+        }
+
+        const nextCycleStartDate = calculateNextCycleStartDate(
+          lastDate,
+          cycleLength,
+          duration
+        );
+        const remainingDays = calculateRemainingDays(nextCycleStartDate);
+        remainingDaysParagraph.textContent = `Remaining days to next menstruation: ${remainingDays}`;
+
+        displayCalendar(
+          monthContainer,
+          daysContainer,
+          nextCycleStartDate,
+          cycleLength
+        );
+        calendarContainer.style.display = "block";
+      }
+
+      function calculateNextCycleStartDate(lastDate, cycleLength, duration) {
+        const lastCycleEndDate = new Date(
+          lastDate.getTime() + duration * 24 * 60 * 60 * 1000
+        );
+        const nextCycleStartDate = new Date(
+          lastCycleEndDate.getTime() + (cycleLength - 1) * 24 * 60 * 60 * 1000
+        );
+        return nextCycleStartDate;
+      }
+
+      function calculateRemainingDays(nextCycleStartDate) {
+        const today = new Date();
+        const differenceInTime = nextCycleStartDate.getTime() - today.getTime();
+        const differenceInDays = Math.ceil(
+          differenceInTime / (1000 * 3600 * 24)
+        );
+        return differenceInDays;
+      }
+
+      function displayCalendar(
+        monthContainer,
+        daysContainer,
+        nextCycleStartDate,
+        cycleLength
+      ) {
+        monthContainer.innerHTML = "";
+        daysContainer.innerHTML = "";
+
+        const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const currentDate = new Date(nextCycleStartDate);
+        const month = months[currentDate.getMonth()];
+
+        monthContainer.textContent = month;
+
+        for (let i = 0; i < 7; i++) {
+          const dayElement = document.createElement("div");
+          dayElement.classList.add("day");
+
+          const dayOfWeek = daysOfWeek[(currentDate.getDay() + i) % 7];
+          const dateOfMonth = currentDate.getDate() + i;
+
+          const dateDiv = document.createElement("div");
+          dateDiv.classList.add("date");
+          dateDiv.textContent = dateOfMonth;
+
+          dayElement.textContent = dayOfWeek;
+          dayElement.appendChild(dateDiv);
+
+          if (i === 0) {
+            dayElement.classList.add("highlight");
+          }
+
+          daysContainer.appendChild(dayElement);
+        }
+      }
+    </script>
+  </body>
+</html>

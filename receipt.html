@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Receipt</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/5a0914105d.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      table {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <div class="flex flex-col justify-center items-center mx-4 text-lg">
+      <div class="py-7">
+        <h1 class="text-center text-xl pb-4 font-bold">ORDER RECEIPT</h1>
+        <table class="table-auto border border-gray-300 rounded">
+          <tr class="p-10">
+            <td class="px-6 py-4">Recipient Name:</td>
+            <td class="px-6 py-4 font-mono" id="username"></td>
+          </tr>
+          <tr class="bg-slate-800">
+            <td class="px-6 py-4">
+              Order item<span class="text-xs">(s)</span>:
+            </td>
+            <td class="px-6 py-4 font-mono" id="optionName"></td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">Amount:</td>
+            <td class="px-6 py-4 font-mono">
+              <i class="fa-solid fa-naira-sign" style="font-size: 11px"></i
+              ><span id="amount"></span>
+            </td>
+          </tr>
+          <tr class="bg-slate-800">
+            <td class="px-6 py-4">Date & time:</td>
+            <td class="px-6 py-4 font-mono" id="dateTime"></td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">Payment method:</td>
+            <td class="px-6 py-4 font-mono">Bank transfer</td>
+          </tr>
+          <tr class="bg-slate-800">
+            <td class="px-6 py-4">Order ID:</td>
+            <td class="font-mono px-6 py-4" id="orderId"></td>
+          </tr>
+
+          <tr class="">
+            <td class="px-6 py-4">Order Destination:</td>
+            <td class="font-mono px-6 py-4" id="destination"></td>
+          </tr>
+
+          <tr class="bg-slate-800">
+            <td class="px-6 py-4">Payment Handler:</td>
+            <td class="px-6 py-4 font-mono">Eddie's Shawarma</td>
+          </tr>
+        </table>
+      </div>
+
+      <a href="shawarma.html" class="">
+        <button
+          id="summaryBtn"
+          class="border-2 border-white px-10 opacity-90 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all mb-5"
+        >
+          Go back Home
+        </button></a
+      >
+    </div>
+
+    <script>
+      // username
+      let username = localStorage.getItem("username");
+      let name = document.getElementById("username");
+      name.innerHTML = `${
+        username.charAt(0).toUpperCase() + username.slice(1)
+      }`;
+
+      let address = localStorage.getItem("address");
+      let city = localStorage.getItem("city");
+      let destination = document.getElementById("destination");
+      destination.innerHTML = `${
+        address.charAt(0).toUpperCase() + address.slice(1)
+      }, ${city.charAt(0).toUpperCase() + city.slice(1)}`;
+
+      // order name option
+      const nameOption = sessionStorage.getItem("nameOption");
+      document.getElementById("optionName").innerText = nameOption;
+      console.log(nameOption);
+
+      // price summary
+      const summaryPrice = sessionStorage.getItem("totalSummary");
+      document.getElementById("amount").innerText = summaryPrice;
+      console.log(summaryPrice);
+
+      //order ID
+      window.onload = function () {
+        let randomNumber = localStorage.getItem("orderId");
+        let orderId = document.getElementById("orderId");
+        orderId.innerHTML = randomNumber;
+        console.log(randomNumber);
+      };
+
+      //date and time
+      let loadDateTime = sessionStorage.getItem("loadDateTime");
+      let formattedDateTime = formatDateTime(loadDateTime);
+      document.getElementById("dateTime").textContent = formattedDateTime;
+
+      function formatDateTime(dateTimeString) {
+        let dateTime = new Date(dateTimeString);
+        let options = {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        };
+        return dateTime.toLocaleString("en-US", options).replace("at", "");
+      }
+    </script>
+  </body>
+</html>

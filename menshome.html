@@ -1,0 +1,190 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowPal.com</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/5a0914105d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .gradient-text {
+        background: linear-gradient(
+          to right,
+          #ff0000,
+          #ff3700,
+          #d75600,
+          #cc1010
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hidden {
+        opacity: 0;
+
+        overflow: hidden;
+        transition: opacity 0.5s ease 0.5s;
+      }
+
+      .visible {
+        opacity: 1;
+        max-height: fit-content;
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hiddenNav {
+        opacity: 0;
+        width: 0;
+        right: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+
+      .visibleNav {
+        opacity: 1;
+        max-height: fit-content;
+      }
+
+      .content-circle {
+        background-color: #ff0000;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black">
+    <div class="overflow-hidden">
+      <!----------------navbar-->
+      <div class="bg-red-600 text-white m-0 fixed w-full z-10">
+        <nav class="">
+          <ul class="flex flex-row justify-between mx-2">
+            <li
+              class="px-10 py-2 font-bold font-mono self-end cursor-pointer"
+              id="profileBtn"
+            >
+              <i class="fa-solid fa-user text-lg">#</i>
+            </li>
+            <li class="px-10 text-3xl py-2 font-bold font-mono text-center">
+              FlowPal
+            </li>
+            <li class="px-10 py-2 font-bold font-mono self-end" id="sideNavBtn">
+              <i class="fa-solid fa-bars text-lg">#</i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!---------------bottom-navbar---->
+      <div
+        class="text-red-600 bottom-0 m-0 fixed w-full z-10 bg-slate-100 p-2 shadow-xl"
+      >
+        <nav class="">
+          <ul class="flex flex-row justify-between">
+            <li
+              class="px-10 py-2 font-bold font-mono self-end cursor-pointer"
+              id="profileBtn"
+            >
+              <i class="fa-solid fa-house text-2xl">#</i>
+            </li>
+            <li class="px-10 py-2 font-bold font-mono text-center">
+              <i class="fa-solid fa-file text-2xl">#</i>
+            </li>
+            <li class="px-10 py-2 font-bold font-mono self-end">
+              <i class="fa-brands fa-leanpub text-2xl">#</i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-----profile-->
+
+      <div
+        class="hidden fixed mt-12 bg-red-600 shadow-xl w-[220px] md:w-[300px] px-6 p-2 text-white z-10"
+        id="profile"
+      >
+        <h1 class="text-xl md:text-center text-white font-bold mt-2">
+          My Profile
+        </h1>
+        <div class="flex flex-col space-y-3 my-3">
+          <h2 class="flex flex-col">
+            <span class="font-semibold"
+              ><i class="fa-solid fa-user text-xs"></i> Name</span
+            >
+            <p class="text-sm opacity-85" id="myName"></p>
+          </h2>
+          <h2 class="flex flex-col">
+            <span class="font-semibold"
+              ><i class="fa-solid fa-lock text-xs"></i> Password</span
+            >
+            <p class="text-sm opacity-85" id="myPassword"></p>
+          </h2>
+        </div>
+      </div>
+
+      <!-----side nav bar-->
+
+      <div
+        class="hiddenNav fixed mt-12 bg-red-600 shadow-xl w-[220px] md:w-[300px] px-6 p-2 z-10 text-white right-0 h-[350px] rounded"
+        id="sideNav"
+      >
+        <div
+          class="flex flex-col justify-between space-y-3 my-3 mt-8 md:text-lg"
+        >
+          <div class="pl-2 pb-3 flex flex-col space-y-2">
+            <a class="cursor-pointer hover:underline">Home</a>
+            <a class="cursor-pointer hover:underline">Adjust cycle Date</a>
+          </div>
+          <hr />
+          <div class="pl-2 pb-3 pt-4 flex flex-col space-y-2">
+            <a class="cursor-pointer hover:underline">About FlowPal</a>
+            <a class="cursor-pointer hover:underline">How to use FlowPal</a>
+          </div>
+
+          <hr />
+        </div>
+        <button id="signOut" class="bottom-0 mb-8 mt-4">Sign Out ></button>
+      </div>
+
+      <!------------greeting-------------->
+
+      <div class="mt-16 relative">
+        <h1 class="gradient-text text-2xl p-4 font-bold pl-8">
+          <span id="greeting"></span> <span id="myUsername"></span>
+        </h1>
+      </div>
+
+      <!---------------------------->
+      <div class="calendar" style="display: none" ;>
+        <div id="months"></div>
+        <div id="days"></div>
+      </div>
+
+      <p id="remainingDays"></p>
+
+      <div
+        class="content-circle flex justify-center items-center mx-auto text-white mt-5 p-10 text-center h-[200px] w-[200px]"
+      >
+        <div class="circle">
+          <p class="text-center">Your period will be here in 12 days</p>
+        </div>
+      </div>
+
+      <!----------------------------->
+    </div>
+
+    <script src="menshome.js"></script>
+  </body>
+</html>

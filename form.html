@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="mx-0">
+    <div
+      class="flex flex-col justify-center items-center h-screen overflow-hidden"
+    >
+      <h1 class="text-2xl font-semibold font-sans">Please sign up</h1>
+      <form class="space-y-6 flex flex-col mt-5">
+        <input
+          type="text"
+          id="inputId"
+          class="myName w-[300px] outline-none pl-4 focus:shadow-lg border border-red-700 rounded py-2 px-2"
+          placeholder="Please enter your name.."
+        />
+        <input
+          type="text"
+          id="inputId"
+          class="w-[300px] outline-none pl-4 focus:shadow-lg border border-red-700 rounded py-2 px-2"
+          placeholder="Please enter your password.."
+        />
+      </form>
+      <button
+        class="bg-red-700 text-white w-[300px] py-3 text-lg font-semibold hover:opacity-85 px-10 rounded mt-6"
+        onclick="submit()"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <script>
+      function submit() {
+        alert("am working!");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body onload="storeDateTime()" class="bg-black text-white">
+    <div class="flex flex-col justify-center items-center h-lvh mx-5 text-lg">
+      <div class="w-[200px] md:w-[300px]">
+        <img src="images/confimation.jpg" alt="" />
+      </div>
+      <h1 class="">
+        Congratulations
+        <span id="username" class="font-bold"></span>, your shawarma order was
+        successful!
+      </h1>
+      <p class="">
+        Our top-notch delivery service is heading to you with your order.
+      </p>
+      <p class="">
+        You wil receive a call shortly with pickup instructions at a spot near
+        you.
+      </p>
+      <p class="">
+        Get ready to enjoy your scrumptious shawarma in less than 15 mins!.
+      </p>
+      <p class="text-xs sm:text-base pt-3">
+        Estimated order arrival time : between <span id="time5"></span> -
+        <span id="time10"></span>
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-6 my-10">
+        <a href="shawarma.html" class="">
+          <button
+            id="summaryBtn"
+            class="w-[240px] border-2 border-white px-10 opacity-90 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all"
+          >
+            Go back Home
+          </button></a
+        >
+        <a href="receipt.html">
+          <button
+            id="summaryBtn"
+            class="w-[240px] border-2 border-white px-10 opacity-90 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all"
+          >
+            View Order receipt
+          </button></a
+        >
+      </div>
+    </div>
+
+    <script>
+      //order arrival time
+      const currentTime = new Date();
+      const time5 = document.getElementById("time5");
+      const time10 = document.getElementById("time10");
+
+      let futureTime5 = new Date(currentTime.getTime() + 5 * 60000);
+      let hour5 = futureTime5.getHours();
+      let minutes5 = futureTime5.getMinutes();
+      let amPm5 = hour5 >= 12 ? " PM " : " AM ";
+      hour5 = hour5 % 12;
+      hour5 = hour5 ? hour5 : 12;
+
+      time5.textContent =
+        hour5 + ":" + (minutes5 < 10 ? "0" : "") + minutes5 + "" + amPm5;
+
+      let futureTime10 = new Date(currentTime.getTime() + 10 * 60000);
+      let hour10 = futureTime10.getHours();
+      let minutes10 = futureTime10.getMinutes();
+      let amPm10 = hour10 >= 12 ? " PM " : " AM ";
+      hour10 = hour10 % 12;
+      hour10 = hour10 ? hour10 : 12;
+
+      time10.textContent =
+        hour10 + ":" + (minutes10 < 10 ? "0" : "") + minutes10 + "" + amPm10;
+
+      function storeDateTime() {
+        let dateTime = new Date();
+        sessionStorage.setItem("loadDateTime", dateTime);
+      }
+
+      let username = localStorage.getItem("username");
+      let name = document.getElementById("username");
+      name.innerHTML = username.charAt(0).toUpperCase() + username.slice(1);
+    </script>
+  </body>
+</html>

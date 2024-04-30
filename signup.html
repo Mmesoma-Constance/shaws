@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="shawarma.css" />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body class="bg-black text-white">
+    <div class="flex flex-col justify-center items-center mt-10 mx-4 text-lg">
+      <div class="">
+        <h1 class="font-bold text-2xl my-6 text-center">Sign in to continue</h1>
+        <form action="" class="flex flex-col justify-center items-center">
+          <div class="mb-7 flex flex-col justify-center items-center">
+            <h3 class="inputFile-container" id="inputFile-container">
+              <input
+                type="file"
+                id="image-upload"
+                class="photoInputted w-1 border-2 opacity-0"
+                name="photo"
+                required
+              />
+              <label for="photo" class="mx-auto text-center"
+                ><span class="photoText text-sm">Add a photo</span></label
+              >
+            </h3>
+            <p class="photoError text-xs text-red-400 text-center"></p>
+          </div>
+
+          <div class="mb-7">
+            <h3 class="input-group">
+              <input
+                type="text"
+                class="nameInputed w-full border-2 border-gray-400"
+                required
+              />
+              <label for="">Your name</label>
+            </h3>
+            <p class="nameError text-xs" style="color: rgba(255, 0, 0, 1)"></p>
+          </div>
+
+          <div class="mb-7">
+            <h3 class="input-group">
+              <input
+                type="number"
+                class="numberInputed w-full border-2 border-gray-400"
+                required
+                maxlength="11"
+              />
+              <label for="">Your phone number</label>
+            </h3>
+            <p class="numberError text-xs text-red-400"></p>
+          </div>
+
+          <div class="mb-7">
+            <h3 class="input-group">
+              <input
+                type="text"
+                class="cityInputed w-full border-2 border-gray-400"
+                required
+              />
+              <label for="">Your City</label>
+            </h3>
+            <p class="cityError text-xs text-red-400"></p>
+          </div>
+
+          <div class="mb-7">
+            <h3 class="input-group">
+              <input
+                type="text"
+                class="addressInputed w-full border-2 border-gray-400"
+                required
+              />
+              <label for="">Your delivery address</label>
+            </h3>
+            <p class="addressError text-xs text-red-400"></p>
+          </div>
+        </form>
+
+        <button
+          class="w-full bg-white p-2 rounded text-black mt-4 font-bold font-sans text-lg uppercase opacity-95 hover:opacity-100 mb-10"
+          onclick="signin()"
+        >
+          <div class="flex flex-row gap-2 justify-center items-center">
+            <span id="spinner3" class="spinner"></span>
+            <span id="process3">Signing in...</span>
+            <span id="available3"></span>
+            <div id="checkMsg3">Sign in</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

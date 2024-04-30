@@ -1,0 +1,188 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      ul .disc {
+        list-style-type: disc;
+      }
+      .image {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white">
+    <div id="timeoutMessage" style="display: none">
+      <div
+        class="h-screen text-center flex flex-col justify-center items-center mx-4"
+      >
+        <p class="">
+          Your order has expired. Please go back to the Home page to order
+          again.
+        </p>
+
+        <div class="flex flex-col justify-center items-center">
+          <a href="shawarma.html" class="mx-auto">
+            <button
+              id="summaryBtn"
+              class="border-2 border-white px-10 opacity-90 mt-4 hover:opacity-100 py-2 font-semibold bg-white border-opacity-70 text-black rounded transition-all"
+            >
+              Go back Home
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center mt-10 mx-4">
+      <div
+        id="paymentDetails"
+        class="flex flex-col justify-center items-center"
+      >
+        <h1 class="font-semibold text-lg pb-5">
+          Please proceed to make payment by transferring the exact amount
+          [&#8358;<span id="price"></span>] to the account details below.
+        </h1>
+        <ul class="">
+          <li class="">
+            Account number : <span class="font-mono"> 475932081</span>
+          </li>
+          <li class="">Account name : Eddie's Shawarma</li>
+          <li class="">Bank : NairaTrust Bank</li>
+          <li class="">
+            Unique order ID :
+            <span class="font-mono" id="orderId"></span>
+            <span class="">
+              <button
+                id="copyButton"
+                class="border text-xs p-0.5 bg-white bg-opacity-90 text-black px-2 cursor-pointer"
+                onclick="copyText()"
+              >
+                Copy
+              </button></span
+            >
+          </li>
+          <li class="disc mx-4 text-red-500">
+            Remember to add this unique ID when making your payment, this
+            special ID is crucial for identifying your specific order
+            accurately.
+          </li>
+        </ul>
+        <p class="">Time remaining : <span id="timer">2:00</span></p>
+        <button
+          id="confirmBtn"
+          class="btn bg-white text-black bg-opacity-95 hover:shadow-2xl hover:bg-opacity-100 p-2 px-6 rounded mt-4"
+          onclick="confirm()"
+        >
+          Click here after transfer
+        </button>
+
+        <div class="image mt-8 flex flex-col justify-center items-center">
+          <h2 class="">
+            Please upload a screenshot of your payment transaction.
+          </h2>
+          <form action="">
+            <input
+              type="file"
+              class="w-full p-2 rounded bg-transparent border-2 border-white mt-3"
+              id="screnshotImg"
+            />
+            <p class="text-xs error text-red-500"></p>
+          </form>
+          <div class="flex flex-col justify-center items-center pb-6">
+            <button
+              class="btn2 mx-auto bg-white text-black bg-opacity-95 hover:shadow-2xl hover:bg-opacity-100 p-2 px-20 rounded mt-4"
+              onclick="submit()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // price summary
+      const summaryPrice = sessionStorage.getItem("totalSummary");
+      document.getElementById("price").innerText = summaryPrice;
+      console.log(summaryPrice);
+
+      window.onload = function () {
+        let timer = 120;
+        let countdown = setInterval(function () {
+          timer--;
+          let minutes = Math.floor(timer / 60);
+          let seconds = timer % 60;
+          document.getElementById("timer").innerHTML =
+            minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+          if (timer <= 0) {
+            clearInterval(countdown);
+            document.getElementById("paymentDetails").style.display = "none";
+            document.getElementById("timeoutMessage").style.display = "block";
+          }
+        }, 1000);
+      };
+
+      //the random oder ID
+      let randomNumber = Math.floor(Math.random() * 1000000000000);
+      document.getElementById("orderId").innerHTML = randomNumber;
+      console.log(randomNumber);
+      localStorage.setItem("orderId", randomNumber);
+
+      //copy text
+      function copyText() {
+        const textToCpoy = randomNumber;
+        const tempInput = document.createElement("input");
+        tempInput.value = textToCpoy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        const copyButton = document.getElementById("copyButton");
+        copyButton.textContent = "Copied";
+        copyButton.disabled = true;
+      }
+
+      const hiddenDiv = document.querySelector(".image");
+      let text = document.querySelector(".btn");
+      let submitText = document.querySelector(".btn2");
+      const confirmBtn = document.getElementById("confirmBtn");
+
+      function confirm() {
+        text.innerHTML = "Reviewing your payment...";
+        setTimeout(function () {
+          text.innerHTML = "Payment reviewed";
+          hiddenDiv.style.display = "block";
+          confirmBtn.disabled = true;
+        }, 7000);
+      }
+
+      function submit() {
+        const screnshotedImg = document.getElementById("sreenshotImg");
+        let selectedImg = screnshotImg.files[0];
+
+        let error = document.querySelector(".error");
+
+        if (selectedImg) {
+          error.innerHTML = "";
+          submitText.innerHTML = "Reviewing your image...";
+          setTimeout(function () {
+            submitText.innerHTML = "Image reviewed";
+            hiddenDiv.style.display = "block";
+          }, 8000);
+
+          setTimeout(function () {
+            window.location.href = "sucessful.html";
+          }, 8500);
+        } else {
+          error.innerHTML =
+            "Please upload a screenshot of your payment transaction!";
+        }
+      }
+    </script>
+  </body>
+</html>

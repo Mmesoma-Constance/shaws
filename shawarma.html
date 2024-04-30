@@ -1,0 +1,1269 @@
+<html lang="en" class="!scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eddie's Shawarma</title>
+    <script
+      src="https://kit.fontawesome.com/5a0914105d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="shawarma.css" />
+  </head>
+  <body class="bg-black">
+    <div class="overflow-hidden">
+      <div class="">
+        <header
+          class="absolute text-white z-10 w-full bg-black bg-opacity-50 h-[620px]"
+          id="home"
+        >
+          <div class="columns">
+            <a href="" class="logo">
+              Eddie's Shawarma
+              <span class="p-2">The Taste is different</span>
+            </a>
+            <nav class="nav hidden lg:flex">
+              <a href="" class="active">Home</a>
+              <a href="#menu" class="hover:font-semibold">Menu</a>
+              <a href="#special" class="hover:font-semibold">Special</a>
+              <a href="#about" class="hover:font-semibold">About us</a>
+              <a href="#review" class="hover:font-semibold">Review</a>
+              <a href="#contact" class="hover:font-semibold">Contact</a>
+            </nav>
+            <span
+              class="phone cursor-pointer flex items-center"
+              title="Make call"
+            >
+              <i class="fa-solid fa-phone"></i> 0715 249 3416</span
+            >
+          </div>
+
+          <div class="intro">
+            <div class="">
+              <div class="content mx-auto text-center">
+                <h1 class="head text-[60px] md:text-[70px]">
+                  Eddie's Shawarma
+                </h1>
+                <h2 class="text-slate-100 pt-2 sm:pt-0">
+                  The best shawarma in town
+                </h2>
+                <button
+                  class="button hover:shadow-xl"
+                  onclick="scrollSmooth(); chickenOrder('Chicken Shawarma')"
+                >
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="relative">
+          <img
+            src="images/shawarma (2).jpg"
+            alt=""
+            class="image max-h-full h-[610px] md:h-[600px] w-full object-cover"
+          />
+        </div>
+      </div>
+      <br id="menu" />
+
+      <!----------------------menu------------------------>
+      <!---------
+<section class="mt-14 mx-5 flex flex-col justify-center items-center opacity-100">
+
+    <div class="opacity-100 text-white">
+        <div class="text-center">
+            <h1 class="menu uppercase text-3xl opacity-100">Our Menu</h1>
+        </div>
+        
+
+        <div class="m-10 px-10  mx-10 flex flex-wrap gap-8 justify-center items-center">
+        
+            <figure class="w-[300px] bg-black bg-opacity-50">
+                <img src="images/shawarma (7).jpg" alt="" class=" opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma1">Chicken Shawarma
+                        <p class="text-base opacity-90">&#8358;5,500</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                     
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Chicken Shawarma')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+
+            <figure class="w-[300px] ">
+                <img src="images/shawarma (6).jpg" alt="" class="opacity-90 hover:opacity-100 transition-transform cursor-pointer  h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma2">Beef Shawarma
+                        <p class="text-base opacity-90">&#8358;5,000</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Beef Shawarma')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+
+            <figure class="w-[300px] ">
+                <img src="images/shawarma (12).jpg" alt="" class=" opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma3">Fish Shawarma
+                        <p class="text-base opacity-90">&#8358;6,500</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Fish Shawarma')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+
+
+            <figure class="w-[300px] ">
+                <img src="images/shawarma (4).jpg" alt="" class=" opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma4">Vegan Shawarma
+                        <p class="text-base opacity-90">&#8358;6,000</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Vegan Shawarma')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+            <figure class="w-[300px] ">
+                <img src="images/shawarma (10).jpg" alt="" class=" opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma5">Mixed Shawarma
+                        <p class="text-base opacity-90">&#8358;9,000</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Mixed Shawarma')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+
+            <figure class="w-[300px] ">
+                <img src="images/shawarma (8).jpg" alt="" class=" opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]">
+                <figcaption class="p-1">
+                 <ul class="flex flex-row justify-between">  
+                      <li class="text-lg text-white shawarma6">Shawarma Plate
+                        <p class="text-base opacity-90">&#8358;8,000</p>
+                      </li>
+                 
+                  
+                    <li class="flex items-center text-sm ">
+                        <button class="p-1 px-6 rounded bg-transparent text-white opacity-70 hover:opacity-100 border-2 border-white hover:bg-white hover:text-black font-semibold" onclick="scrollSmooth(); chickenOrder('Shawarma Plate')">Order</button>
+                    </li>
+                  </ul>  
+                </figcaption>
+            </figure>
+          
+        </div>
+    </div>
+
+</section>
+------------>
+
+      <section
+        class="mt-14 mx-5 flex flex-col justify-center items-center opacity-100"
+      >
+        <div class="opacity-100 text-white">
+          <div class="text-center">
+            <h1 class="menu uppercase text-3xl opacity-100">Our Menu</h1>
+          </div>
+
+          <div
+            class="m-10 px-10 mx-10 flex flex-wrap gap-8 justify-center items-center"
+          >
+            <figure class="w-[300px] bg-black bg-opacity-50">
+              <img
+                src="images/shawarma (7).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Chicken Shawarma
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(5,584)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;5,500
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  Juicy grilled chicken wrapped in a fluffy pita bread with
+                  spicy pepper sauce, crunchy cabbage, and savory sausage.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="w-[300px]">
+              <img
+                src="images/shawarma (6).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Beef Shawarma
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(5,741)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;5,000
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  Succulent grilled beef in a pita bread with aromatic suya
+                  spice, creamy coleslaw, and savory sausage.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="w-[300px]">
+              <img
+                src="images/shawarma (12).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Fish Shawarma
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9734;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(3,429)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;6,500
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  Flaky fish in a pita bread seasoned with zesty spice, tangy
+                  pepper sauce, crispy plaintains, and vibrant greens.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="w-[300px]">
+              <img
+                src="images/shawarma (4).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Vegan Shawarma
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9734;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(2,173)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;6,000
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  Marinated plant-based protein in a pita bread with spicy
+                  sauce, pickled onions, and fresh veggies.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="w-[300px]">
+              <img
+                src="images/shawarma (10).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Mixed Shawarma
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(4,563)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;9,000
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  A mix of chicken, beef, and suya-spiced lamb in a pita bread
+                  with a variety of sauces and toppings.
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="w-[300px]">
+              <img
+                src="images/shawarma (8).jpg"
+                alt=""
+                class="opacity-90 hover:opacity-100 transition-transform cursor-pointer h-[220px]"
+              />
+              <figcaption class="p-1">
+                <ul class="flex flex-row justify-between">
+                  <li class="text-lg text-white shawarma1">
+                    Shawarma Plate
+                    <p class="text-base opacity-85">
+                      &#9733;&#9733;&#9733;&#9733;&#9734;
+                      <span class="opacity-90" style="font-size: 11px"
+                        >(3,729)</span
+                      >
+                    </p>
+                  </li>
+
+                  <li class="flex items-center text-sm">
+                    <button
+                      style="border-width: 1.9px"
+                      class="p-1 px-6 rounded bg-transparent text-white opacity-90 hover:opacity-100 border-white hover:bg-white hover:text-black font-semibold"
+                    >
+                      &#8358;8,000
+                    </button>
+                  </li>
+                </ul>
+                <p class="opacity-85" style="font-size: 13px">
+                  <span class="font-semibold opacity-100"> Description :</span>
+                  Your choice of protein served with aromatic jollof rice, fried
+                  plaintains, salad, spicy pepper sauce, and warm flatbread.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------offers---------------------->
+      <br id="special" />
+      <section
+        class="mt-16 mx-5 flex flex-col justify-center items-center opacity-100"
+      >
+        <div class="opacity-100 text-white">
+          <div class="text-center">
+            <h1 class="menu2 uppercase text-3xl opacity-100">Special Offers</h1>
+          </div>
+
+          <div
+            class="m-10 px-10 mx-10 flex flex-wrap gap-8 justify-center items-center"
+          >
+            <span
+              class="bg-gradient-to-tr from-lime-700 via-lime-400 to-lime-700 w-[500px] p-10 opacity-90 m-4"
+            >
+              <h1 class="text-4xl text-center mb-7 font-mono">
+                Chicken Shawarma
+              </h1>
+              <div class="">
+                <span class="flex gap-7">
+                  <img
+                    src="images/shawarmachi (4).jpg"
+                    alt=""
+                    class="image max-h-[250px] rounded-full w-80 float-left border-4 border-white absolute"
+                  />
+                  <img
+                    src="images/shawarmachi (3).jpg"
+                    alt=""
+                    class="max-h-36 rounded-full border-4 border-white relative flex items-end self-end justify-end left-64 right-40 float-right w-40 top-32"
+                  />
+                  <!-----  <img src="images/shawarmapng (6).png" alt="" class="max-h-[320px] max-w-[350px]"> -->
+                </span>
+
+                <div class="flex flex-col items-center justify-center">
+                  <p
+                    class="text-xl font-bold relative mt-40 mx-10 md:mx-0 text-center"
+                  >
+                    Grab 2 of our delicious Chicken Shawarma and receive 1
+                    absolutely FREE!!
+                  </p>
+                  <p class="pt-2 mx-5">
+                    Offer valid on weekdays from 4:00 PM to 6:00 PM
+                  </p>
+
+                  <button
+                    id="chickenBtn"
+                    class="uppercase p-3 mt-3 px-10 bg-gradient-to-tr from-orange-600 via-orange-400 to-orange-600 hover:shadow-xl text-white font-bold"
+                    onclick="chickenPromo2(); chickenOrder('Chicken Shawarma'); updateNumber()"
+                  >
+                    <div class="flex flex-row gap-2">
+                      <span id="spinner" class="spinner"></span>
+                      <span id="process">Checking...</span>
+                      <span id="available"></span>
+                      <div id="checkMsg">CHECK AVAILABILITY</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </span>
+
+            <span
+              class="bg-gradient-to-tr from-orange-600 via-orange-400 to-orange-600 w-[500px] p-10 opacity-90 m-4"
+            >
+              <h1 class="text-4xl text-center pb-4 font-mono">
+                Mixed Shawarma
+              </h1>
+              <div class="flex items-center justify-center mt-12">
+                <p
+                  class="absolute z-10 p-5 px-7 float-right text-lg border-2 rounded-full bg-black text-white w-fit font-bold"
+                >
+                  10%
+                  <b class="block uppercase"> off</b>
+                </p>
+              </div>
+              <img src="images/shawarmapng (4).png" alt="" class="relative" />
+              <div
+                class="flex flex-col items-center justify-center py-4 text-center"
+              >
+                <p class="text-xl font-bold mx-10 md:mx-0">
+                  Purchase 2 of our tasty Mixed Shawarma for &#8358;16,200
+                  <del class="text-sm">&#8358;18,000</del>
+                </p>
+                <p class="pt-2 mx-5">
+                  Offer valid on weekends from 5:00 PM to 6:00 PM
+                </p>
+
+                <button
+                  id="mixedBtn"
+                  class="uppercase p-3 mt-4 px-10 bg-gradient-to-tr from-lime-600 via-lime-500 to-lime-600 hover:shadow-xl text-white font-bold"
+                  onclick="chickenPromo(); chickenOrder('Mixed Shawarma'); updateNumber()"
+                >
+                  <div class="flex flex-row gap-2">
+                    <span id="spinner2" class="spinner"></span>
+                    <span id="process2">Checking...</span>
+                    <span id="available2"></span>
+                    <div id="checkMsg2">CHECK AVAILABILITY</div>
+                  </div>
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------about------------------------>
+      <br id="about" />
+      <section
+        class="mt-16 sm:mx-5 flex flex-col justify-center items-center opacity-100"
+      >
+        <div class="opacity-100 text-white">
+          <div class="text-center">
+            <h1 class="menu uppercase text-3xl opacity-100">About Us</h1>
+          </div>
+
+          <div
+            class="my-10 px-7 md:px-10 mx-2 lg:mx-10 flex flex-col md:flex-row gap-8 lg:gap-4 justify-center items-center"
+          >
+            <span class="md:w-[50%]">
+              <img
+                src="images/shawarmachi (3).jpg"
+                alt=""
+                class="h-80 w-[500px] opacity-85 border-l-2 border-l-white border-b-2 border-b-white border-opacity-40 p-3"
+              />
+            </span>
+            <span class="md:w-[40%]">
+              <h1 class="font-bold uppercase text-xl">Who are We ?</h1>
+              <p class="py-6">
+                Welcome to our mouthwatering world of Shawarmas. We're dedicated
+                to serving up shawarmas that are nothing short of ordinary.
+                <br />
+
+                Our Shawarmas are a symphony of flavors, combining the richness
+                of slow-cooked meats, the freshness of veggies, and the tang of
+                our signature sauces..
+                <span class="hiddenText pt-2">
+                  <b class="font-normal pb-4">
+                    Bite into one of our creations and let the explosion of
+                    taste take you on a culinary adventure like no other. We're
+                    proud to serve you the finest shawarama made with love
+                    that'll have you coming back for seconds, thirds and beyond! </b
+                  ><br />
+
+                  <span class="font-semibold mt-2">
+                    <br />Get ready to fall in love with Shawarma all over
+                    again!
+                  </span>
+                </span>
+              </p>
+              <button
+                id="hiddenBtn"
+                class="border-2 border-white px-10 py-2 font-semibold hover:bg-white border-opacity-70 hover:text-black rounded transition-all"
+                onclick="showText()"
+              >
+                Read More
+              </button>
+
+              <button id="summaryBtn"></button>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------clients---------------------->
+      <br id="review" />
+      <section
+        class="mt-20 mx-5 flex flex-col justify-center items-center opacity-100"
+      >
+        <div class="">
+          <ul
+            class="flex flex-col sm:flex-row justify-between sm:items-center my-2"
+          >
+            <li class="text-3xl font-mono pb-4">Our Clients say</li>
+            <li
+              class="opacity-90 hover:opacity-100 cursor-pointer text-xs sm:text-sm md:text-base self-end"
+            >
+              Read more &#x2192;
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-7 justify-center items-center">
+            <div
+              class="border-2 p-5 w-80 opacity-85 h-[250px]"
+              id="hiddenReview"
+            >
+              <div class="flex flex-row gap-2 mb-4">
+                <img
+                  src="images/people (7).png"
+                  alt=""
+                  class="w-10 h-10 rounded-full"
+                />
+                <h1 class="flex flex-col">
+                  <span class="font-bold">Christine</span>
+                  <span class="text-xs"
+                    ><span id="reviewTime3">45</span> minutes ago</span
+                  >
+                </h1>
+              </div>
+              <q class="italic">
+                Eddie's Shawarma is my go-to spot for the best shawarma in town!
+                The fresh wraps, authentic flavors, delicious taste, quick
+                delivery and special offers makes it a standout choice for
+                shawarma lovers.
+              </q>
+            </div>
+
+            <div class="border-2 p-5 w-80 opacity-85 h-[250px]" id="review2">
+              <div class="flex flex-row gap-2 mb-4">
+                <img
+                  src="images/people (6).jpg"
+                  alt=""
+                  class="w-10 h-10 rounded-full"
+                />
+                <h1 class="flex flex-col">
+                  <span class="font-bold">Joshua MJ</span>
+                  <span class="text-xs"
+                    ><span id="reviewTime2">31</span> minutes ago</span
+                  >
+                </h1>
+              </div>
+              <q class="italic">
+                Just had a taste of Eddie's Shawarma, and it's a flavor
+                explosion! Delicious shawarma that exceeded my expectations. If
+                you're a shawarma fan, you have to try this place!
+              </q>
+            </div>
+
+            <div class="border-2 p-5 w-80 opacity-85 h-[250px]" id="review1">
+              <div class="flex flex-row gap-2 mb-4">
+                <img
+                  src="images/people (16).jpg"
+                  alt=""
+                  class="w-10 h-10 rounded-full"
+                />
+                <h1 class="flex flex-col">
+                  <span class="font-bold">Celine Amanda</span>
+                  <span class="text-xs"
+                    ><span id="reviewTime1">22</span> minutes ago</span
+                  >
+                </h1>
+              </div>
+              <q class="italic">
+                From the first bite to the last, this shawarma left me craving
+                for more. Highly recommended!
+              </q>
+            </div>
+
+            <div
+              class="relative border-2 p-5 w-80 opacity-85 h-[250px]"
+              id="reviewDisplay"
+            >
+              <div class="flex flex-row gap-2 mb-4">
+                <img src="" class="w-10 h-10 rounded-full" id="myImage" />
+                <h1 class="flex flex-col">
+                  <span class="font-bold" id="reviewName"></span>
+                  <span class="text-xs" id="timeParagraph"></span>
+                </h1>
+              </div>
+              <q class="italic" id="reviewText"> </q>
+              <button
+                id="deleteReview"
+                class="absolute m-5 text-red-400 text-xs self-end right-0 bottom-0"
+                onclick="deleteMyReview()"
+              >
+                Delete review
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20 flex flex-row gap-3 items-center" id="inputContent">
+          <input
+            type="text"
+            class="w-[200px] bg-transparent p-2 px-2 pl-4 border-2 rounded"
+            placeholder="write a review..."
+            id="reviewInput"
+          />
+
+          <button
+            id="sendReview"
+            onclick="sendReview()"
+            class="bg-white items-center text-black px-7 py-2 rounded"
+          >
+            send
+          </button>
+        </div>
+      </section>
+
+      <!---------------------instagram------------------------->
+
+      <section
+        class="mt-32 mb-20 mx-3 flex flex-col justify-center items-center opacity-100"
+      >
+        <div class="">
+          <ul class="flex flex-row justify-between items-center my-2">
+            <li class="text-3xl font-mono pb-4">Instagram</li>
+            <li class="text-xs sm:text-sm md:text-base">
+              <a href="#" class="pt-1 h-5"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="">Eddie's Shawarma </a>
+            </li>
+          </ul>
+
+          <div class="horizontal_slider">
+            <div class="slider_container">
+              <div class="item">
+                <img
+                  src="images/shawarmachi (1).jpg"
+                  alt=""
+                  class="h-64 w-56 opacity-95"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="images/shawarma (5).jpg"
+                  alt=""
+                  class="h-64 w-56 opacity-95"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="images/shawarma (13).jpg"
+                  alt=""
+                  class="h-64 w-56 opacity-95"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="images/shawarma (9).jpg"
+                  alt=""
+                  class="h-64 w-56 opacity-95"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="images/shawarma (15).png"
+                  alt=""
+                  class="h-64 w-56 opacity-95"
+                />
+              </div>
+            </div>
+
+            <!----------------------<p class="flex flex-row justify-center items-center gap-3 text-2xl">
+         <b class="cursor-pointer opacity-70 hover:opacity-100"> &#x2190; </b> 
+         <b class="cursor-pointer opacity-70  hover:opacity-100"> &#x2192; </b>
+      </p>----------->
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------order---------------------->
+
+      <section
+        class="my-20 mt-32 px-20 flex flex-col justify-center items-center opacity-100"
+      >
+        <br id="order" />
+        <div class="md:px-20 lg:mx-10">
+          <div class="text-center">
+            <h1 class="menu3 uppercase text-3xl opacity-100 bg-black md:px-5">
+              Order a shawarma
+            </h1>
+          </div>
+
+          <div class="">
+            <span class="w-full">
+              <div class="mx-10" id="shawarmaOptions"></div>
+
+              <!--------------------oder options------------------------->
+              <div
+                class="flex flex-wrap gap-6 justify-center items-center mt-10"
+              >
+                <!-----------chicken option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Chicken Shawarma"
+                  data-price="5500"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Chicken Shawarma"
+                          value="5,500"
+                        />
+                        <label for="myCheckbox3">Chicken Shawarma</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">5,500</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-----------beef option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Beef Shawarma"
+                  data-price="5000"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Beef Shawarma"
+                          value="5,000"
+                        />
+                        <label for="myCheckbox3">Beef Shawarma</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">5,000</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-----------fish option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Fish Shawarma"
+                  data-price="6500"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Fish Shawarma"
+                          value="6,500"
+                        />
+                        <label for="myCheckbox3">Fish Shawarma</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">6,500</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-----------vegan option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Vegan Shawarma"
+                  data-price="6000"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Vegan Shawarma"
+                          value="6,000"
+                        />
+                        <label for="myCheckbox3">Vegan Shawarma</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">6,000</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-----------Mixed option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Mixed Shawarma"
+                  data-price="9000"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Mixed Shawarma"
+                          value="9,000"
+                        />
+                        <label for="myCheckbox3">Mixed Shawarma</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">9,000</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-----------shawarma plate option------------->
+
+                <div
+                  class="shawarma-option"
+                  data-name="Shawarma Plate"
+                  data-price="8000"
+                >
+                  <div
+                    class="p-2 py-6 flex flex-col md:flex-row justify-between md:items-center w-[330px] md:w-[390px]"
+                    id="shawarmaOptions"
+                  >
+                    <div class="flex flex-row gap-1 w-full">
+                      <span class="w-[130px]">
+                        <img
+                          src="images/shawarma (12).jpg"
+                          alt=""
+                          class="w-20 h-14 object-cover"
+                      /></span>
+
+                      <span class="w-full">
+                        <input
+                          type="checkbox"
+                          class="shawarma-checkbox"
+                          name="Beef Shawarma"
+                          value="8,000"
+                        />
+                        <label for="myCheckbox3">Shawarma Plate</label>
+                        <p class="text-sm">
+                          <span class="">&#8358;</span
+                          ><span class="listPrice">8,000</span>
+                        </p>
+                      </span>
+
+                      <button
+                        class="quantity-btn increment-btn items-center self-end bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black"
+                      >
+                        +
+                      </button>
+                      <span
+                        class="quantity-display items-center self-end px-2 rounded-full border"
+                        >0</span
+                      >
+                      <button
+                        class="quantity-btn decrement-btn bg-white opacity-90 cursor-pointer hover:opacity-100 font-bold px-2 rounded-full text-black items-center self-end"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <form action="" class="">
+                <!------------------  <div class="mb-7"> <h3 class="input-group">
+        <input  class="inputed w-full border-2 border-gray-400 " required>
+        <label for="">Your name</label>
+       
+      </h3>    <p class="error text-xs text-red-400"></p>
+      </div>
+      
+    <h3> <label for="nameIn" class="relative mt-4">
+        <input type="email" class=" text-sm inputed border-2 border-gray-400 w-full py-3 px-4 rounded outline-none focus:border-white duration-200 peer  z-10 bg-black"  required>
+      <span class="nameValue absolute left-0 top-0.5  peer-focus:-translate-y-6 px-1 ml-3 peer-focus:bg-black text-gray-400 peer-focus:text-white peer-focus:text-sm">Your Name</span>
+      </label>
+       <p class="error text-sm text-red-400"></p>
+      </h3>  
+
+    <div class="mb-7">  <h3 class="input-group">
+        <input   class="inputed2 w-full border-2 border-gray-400 " required>
+        <label for="">Your email</label>
+       
+      </h3>    <p class="error2 text-xs text-red-400"></p>
+      </div>
+        
+      <div class="mb-7"> <h3 class="input-group">
+        <input  class="inputed4 w-full border-2 border-gray-400 " required maxlength="11">
+        <label for="">Your phone number</label>
+       
+      </h3>    <p class="error4 text-xs text-red-400"></p>
+      </div>
+     
+
+      <div class="mb-2"> <h3 class="input-group">
+        <input  class="inputed3 w-full border-2 border-gray-400 " required>
+        <label for="">Your location</label>
+       
+      </h3>    <p class="error3 text-xs text-red-400"></p>
+      </div>
+----->
+                <h3 class="" style="display: none">
+                  <label
+                    for="nameIn"
+                    class="left-5 relative top-3 bg-black px-1"
+                    >Preferred Shawarma type</label
+                  >
+                  <span class="flex gap-1">
+                    <select
+                      name=""
+                      id="selectValue"
+                      class="text-sm text-gray-400 border-2 border-gray-400 w-full p-2 pt-3 rounded outline-none bg-black focus:border-white"
+                    >
+                      <option value="Chicken Shawarma" id="option1">
+                        Chicken Shawarma
+                      </option>
+                      <option value="Beef Shawarma" id="option2">
+                        Beef Shawarma
+                      </option>
+                      <option value="Fish Shawarma" id="option3">
+                        Fish Shawarma
+                      </option>
+                      <option value="Vegan Shawarma" id="option4">
+                        Vegan Shawarma
+                      </option>
+                      <option value="Mixed Shawarma" id="option5">
+                        Mixed Shawarma
+                      </option>
+                      <option value="Shawarma Plate" id="option6">
+                        Shawarma Plate
+                      </option>
+                    </select>
+
+                    <strong class="relative">
+                      <div
+                        type="text"
+                        class="w-14 h-full bg-transparent border-2 border-gray-400"
+                      >
+                        <span
+                          class="flex flex-row gap-1 absolute top-2.5 left-1.5 px-2 items-center justify-center text-center"
+                        >
+                          <b
+                            class="font-normal cursor-pointer minusValue"
+                            onclick="valueMinus('-')"
+                            >-</b
+                          >
+                          <b class="font-normal numberValue">1</b>
+                          <b
+                            class="font-normal cursor-pointer addValue"
+                            onclick="valueMinus('+')"
+                            >+</b
+                          >
+                        </span>
+                      </div>
+                    </strong>
+                  </span>
+                </h3>
+              </form>
+
+              <div id="textDisplay"></div>
+              <div class="mt-10 flex justify-center">
+                <button
+                  class="bg-white text-black p-2 w-[300px] md:w-[400px] text-lg uppercase font-bold rounded"
+                  onclick="showResult()"
+                >
+                  order
+                </button>
+              </div>
+
+              <button
+                class="w-full bg-white p-2 rounded text-black mt-6 font-bold font-sans text-lg uppercase opacity-95 hover:opacity-100"
+                id="orderbtn"
+                onclick="order()"
+                style="display: none"
+              >
+                <div class="flex flex-row gap-2 justify-center items-center">
+                  <span id="spinner3" class="spinner"></span>
+                  <span id="process3">Processing...</span>
+                  <span id="available3"></span>
+                  <div id="checkMsg3">ORDER</div>
+                </div>
+              </button>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------->
+      <br id="contact" />
+      <footer class="border px-10 relative mx-10 sm:mx-20 md:mx-32 my-10">
+        <header
+          class="top-[-30px] inline-block text-center left-[50%] ml-[-128px] md:ml-[-110px] w-[250px] absolute text-white bg-black"
+        >
+          <div class="">
+            <a href="" class="logo">
+              Eddie's Shawarma
+              <span class="p-2">The Taste is different</span>
+            </a>
+          </div>
+        </header>
+        <div class="columns py-10 opacity-90">
+          <div class="">
+            0715 249 3416 <br />
+            We work: 7:00 - 22:00 <br />
+            123 Lagos street, Nigeria.
+          </div>
+          <div class="flex flex-col text-left items-start sm:items-center">
+            <a href="" class="hover:underline">Terms and Privacy</a>
+            &copy; All rights reserved.
+          </div>
+          <div class="flex flex-col">
+            Follow us
+            <span class="flex flex-row gap-3">
+              <a href="" class="pt-1 h-5"
+                ><i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="" class="pt-1 h-5"
+                ><i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="" class="pt-1 h-5"
+                ><i class="fa-brands fa-twitter"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <a
+        href="#home"
+        class="text-sm text-center opacity-75 hover:opacity-85 flex justify-center items-center"
+      >
+        <i class="fa-solid fa-caret-up text-xl"></i> Back to top
+      </a>
+
+      <!------------------------------->
+    </div>
+
+    <script src="shawarma.js"></script>
+    <script src="order.js"></script>
+  </body>
+</html>
